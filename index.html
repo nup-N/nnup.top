@@ -1,4 +1,5 @@
 <html>
+
 <head>
 
 <link rel="shortcut icon" href="img/favicon.png" type="image/png">
@@ -39,6 +40,18 @@ body {
   text-decoration: none;
 }
 
+/* 设置圆体字的文字 */
+.text {
+  position: absolute;
+  top: calc(50% - (80% / 2) - (30px / 2)); /* 计算文字的上边距，使其在框的正上方 */
+  left: calc(50% - (200px / 2)); /* 计算文字的左边距，使其水平居中 */
+  width: 200px; /* 设置文字的宽度 */
+  height: 30px; /* 设置文字的高度 */
+  font-family: Arial, sans-serif; 
+  font-style: italic; /* 设置文字的字体为圆体 */
+  font-size: 24px; /* 设置文字的字号 */
+}
+
 /* 设置超链接的样式 */
 .link:hover {
   color: rgb(99, 155, 191);
@@ -46,6 +59,7 @@ body {
 </style>
 </head>
 <body>
+  <div class="text">看，这只菜狗又上线了_</div>
 <div class="box">
 <a class="link" href="https://start.nnup.fun">Nnup の URL navigation(Undone)</a>
 <a class="link" href="https://blog.nnup.fun">Nnup の Blog</a>
