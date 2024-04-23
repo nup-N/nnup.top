@@ -1,0 +1,85 @@
+  html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+  }
+
+  .container {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .content {
+      flex: 1;
+  }
+
+/* 设置背景图片*/ 
+body {
+background-image: url("img/bg.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+margin: 0;
+padding: 0;
+}
+
+/* 设置圆体字的文字 */
+.text {
+position: absolute;
+top: calc(50% - (55% / 2) - (30px / 2)); /* 计算文字的上边距，使其在框的正上方 */
+left: calc(50% - (200px / 2)); /* 计算文字的左边距，使其水平居中 */
+color: rgb(0, 0, 0);
+font-family: Arial, sans-serif; 
+font-style: italic; /* 设置文字的字体为圆体 */
+font-size: 24px; /* 设置文字的字号 */
+font-weight: bold; /* 新增 */
+}
+
+/* 设置半透明的圆角带高斯模糊效果的框 */
+.box {
+position: absolute;
+top: 35%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 45%;
+border-radius: 20px;
+background-color: rgba(255, 255, 255, 0.5);
+backdrop-filter: blur(10px);
+align-items: center;
+padding: 10px 20px;
+}
+
+/* 设置框内的文本超链接 */
+.link {
+display: block;
+text-align: center;
+font-size: 20px;
+color: black;
+text-decoration: none;
+}
+.link:hover {
+color: rgb(99, 155, 191);
+}
+
+
+
+/* 设置底部版权信息样式 */
+.footer {
+position: absolute;
+bottom: 10px;
+left: 50%;
+transform: translateX(-50%);
+text-align: center;
+color: #000000;
+font-size: 14px;
+font-family: Arial, sans-serif;
+}
+
+.footer a {
+color: #888;
+text-decoration: none;
+}
+
+.footer a:hover {
+color: #555;
+}
