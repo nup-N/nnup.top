@@ -27,7 +27,7 @@ padding: 0;
 .text {
 position: absolute;
 top: calc(45% - (55% / 2) - (30px / 2)); /* 计算文字的上边距，使其在框的正上方 */
-left: calc(50% - (200px / 2)); /* 计算文字的左边距，使其水平居中 */
+left: calc(50% - (254px / 2)); /* 计算文字的左边距，使其水平居中 */
 color: rgb(0, 0, 0);
 font-family: Arial, sans-serif; 
 font-style: italic; /* 设置文字的字体为圆体 */
