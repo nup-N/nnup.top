@@ -16,7 +16,7 @@
 
 /* 设置背景图片*/ 
 body {
-background-image: url("img/bg.jpg");
+background-image: url("img/bg.webp");
 background-size: cover;
 background-repeat: no-repeat;
 margin: 0;
