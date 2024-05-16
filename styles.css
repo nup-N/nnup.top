@@ -33,6 +33,7 @@ font-family: Arial, sans-serif;
 font-style: italic; /* 设置文字的字体为圆体 */
 font-size: 24px; /* 设置文字的字号 */
 font-weight: bold; /* 新增 */
+margin: auto;
 }
 
 /* 设置半透明的圆角带高斯模糊效果的框 */
