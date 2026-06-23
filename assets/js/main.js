@@ -3,21 +3,15 @@ const navLinks = document.querySelectorAll('.nav-menu a');
 const sections = document.querySelectorAll('.right > section');
 
 function switchTab(targetId) {
-  // Update nav
   navLinks.forEach(link => {
     link.classList.toggle('active', link.getAttribute('goto') === targetId);
   });
-
-  // Update sections
   sections.forEach(section => {
     section.classList.toggle('active', section.id === targetId);
   });
-
-  // Update URL hash without scrolling
   history.replaceState(null, '', '#' + targetId);
 }
 
-// Click handlers
 navLinks.forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -26,7 +20,6 @@ navLinks.forEach(link => {
   });
 });
 
-// ===== Init from hash =====
 const initHash = location.hash.replace('#', '') || 'home';
 if (document.getElementById(initHash)) {
   switchTab(initHash);
@@ -50,7 +43,6 @@ if (document.getElementById(initHash)) {
     star.style.animationDelay = Math.random() * 10 + 's';
     container.appendChild(star);
   }
-  // Add shooting stars
   for (let i = 0; i < 3; i++) {
     const ss = document.createElement('div');
     ss.className = 'shooting-star';
@@ -77,10 +69,10 @@ if (quoteEl) {
   fetch('https://v1.hitokoto.cn?c=i')
     .then(res => res.json())
     .then(data => {
-      quoteEl.textContent = `�?${data.hitokoto} 』`;
+      quoteEl.textContent = '\u300e ' + data.hitokoto + ' \u300f';
     })
     .catch(() => {
-      quoteEl.textContent = '�?人生即是到来、相遇、陪伴、离开 �?;
+      quoteEl.textContent = '\u300e \u4eba\u751f\u5373\u662f\u5230\u6765\u3001\u76f8\u9047\u3001\u966a\u4f34\u3001\u79bb\u5f00 \u300f';
     });
 }
 
@@ -88,24 +80,19 @@ if (quoteEl) {
 function updateRuntime() {
   const el = document.getElementById('runtime');
   if (!el) return;
-
   const start = new Date('2022-10-01T00:00:00+08:00');
   const now = new Date();
   const diff = Math.floor((now - start) / 1000);
-
   const years = Math.floor(diff / (365 * 24 * 3600));
   const days = Math.floor((diff % (365 * 24 * 3600)) / (24 * 3600));
   const hours = Math.floor((diff % (24 * 3600)) / 3600);
   const minutes = Math.floor((diff % 3600) / 60);
   const seconds = diff % 60;
-
-  el.textContent = `${years}�?{days}�?{hours}�?{minutes}�?{seconds}秒`;
+  el.textContent = years + '\u5e74' + days + '\u5929' + hours + '\u65f6' + minutes + '\u5206' + seconds + '\u79d2';
 }
-
 updateRuntime();
 setInterval(updateRuntime, 1000);
 
-// ===== Year in footer =====
 const yearEl = document.getElementById('footer-year');
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
