@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="keywords" content="nnup,个人主页,主页">
+  <meta name="description" content="nnup的个人主页">
+  <title>nnup</title>
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🚀</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div id="loading-overlay">
+    <div class="loading-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="loading-text">Loading...</div>
+  </div>
+
+  <!-- Background -->
+  <div id="bg-overlay"></div>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="glow glow-3"></div>
+  <div id="bg-anim"></div>
+
+  <!-- Container -->
+  <div id="container">
+    <main>
+      <div class="card">
+        <!-- Left Panel -->
+        <div class="left">
+          <div class="avatar">
+            <div class="avatar-placeholder">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+          </div>
+          <ul class="nav-menu">
+            <li><a goto="home" class="active"><i class="fa-solid fa-house"></i> HOME</a></li>
+            <li><a goto="about"><i class="fa-solid fa-user"></i> ABOUT</a></li>
+            <li><a goto="projects"><i class="fa-solid fa-code"></i> PROJECTS</a></li>
+            <li><a goto="contact"><i class="fa-solid fa-envelope"></i> CONTACT</a></li>
+          </ul>
+          <div class="left-footer">
+            Made with <i class="fa-solid fa-heart"></i> by<br>
+            <a href="https://nnup.top" target="_blank">nnup</a>
+          </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right">
+          <!-- Home Section -->
+          <section id="home" class="active">
+            <div class="greeting">👋 HELLO, I'M</div>
+            <h1>nnup</h1>
+            <div class="subtitle">Full-stack Developer / Designer / Creator</div>
+            <div class="bio">
+              热爱技术与创造，享受把想法变成现实的过程。<br>
+              全栈开发者，对前端工程化、UI 设计和系统架构有浓厚兴趣。<br>
+              持续学习中，保持好奇，保持热情。
+            </div>
+            <div class="quote-card">
+              <div class="quote-text" id="hitokoto">『 Loading... 』</div>
+            </div>
+            <div class="social-links-home">
+              <a href="https://github.com" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://blog.nnup.top" target="_blank" title="Blog"><i class="fa-solid fa-blog"></i></a>
+              <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="mailto:hi@nnup.top" target="_blank" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </section>
+
+          <!-- About Section -->
+          <section id="about">
+            <h2><i class="fa-solid fa-user"></i> About</h2>
+            <div class="about-content">
+              <p>
+                一个热爱技术与设计的开发者，专注于构建优雅、高效的数字产品。
+                相信好的设计能够改变世界，好的代码能够让生活更美好。
+              </p>
+              <p>
+                闲暇时喜欢研究新技术、写写博客、拍拍照片，偶尔也会打打游戏。
+              </p>
+            </div>
+            <div class="info-grid">
+              <div class="info-item"><i class="fa-solid fa-location-dot"></i> China</div>
+              <div class="info-item"><i class="fa-solid fa-briefcase"></i> Developer</div>
+              <div class="info-item"><i class="fa-solid fa-graduation-cap"></i> Self-taught</div>
+              <div class="info-item"><i class="fa-solid fa-heart"></i> Code &amp; Design</div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">UI Design</span>
+              <span class="skill-tag">Linux</span>
+            </div>
+          </section>
+
+          <!-- Projects Section -->
+          <section id="projects">
+            <h2><i class="fa-solid fa-code"></i> Projects</h2>
+            <div class="project-grid">
+              <div class="project-card">
+                <h3>Project Alpha</h3>
+                <p>A modern web application built with React and TypeScript, featuring real-time collaboration and beautiful UI.</p>
+                <div class="project-links">
+                  <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Source</a>
+                  <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                </div>
+              </div>
+              <div class="project-card">
+                <h3>Project Beta</h3>
+                <p>An open-source CLI tool that simplifies development workflows, with plugin support and extensive customization.</p>
+                <div class="project-links">
+                  <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Source</a>
+                  <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                </div>
+              </div>
+              <div class="project-card">
+                <h3>Project Gamma</h3>
+                <p>A minimalist note-taking app with Markdown support, local-first storage, and cross-platform sync.</p>
+                <div class="project-links">
+                  <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Source</a>
+                  <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                </div>
+              </div>
+              <div class="project-card">
+                <h3>Project Delta</h3>
+                <p>A personal dashboard aggregating weather, news, calendar, and tasks in one clean interface.</p>
+                <div class="project-links">
+                  <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Source</a>
+                  <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section id="contact">
+            <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+            <div class="contact-grid">
+              <a href="https://github.com" target="_blank" class="contact-item">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://blog.nnup.top" target="_blank" class="contact-item">
+                <i class="fa-solid fa-blog"></i>
+                <span>Blog</span>
+              </a>
+              <a href="https://twitter.com" target="_blank" class="contact-item">
+                <i class="fa-brands fa-twitter"></i>
+                <span>Twitter</span>
+              </a>
+              <a href="https://t.me" target="_blank" class="contact-item">
+                <i class="fa-brands fa-telegram"></i>
+                <span>Telegram</span>
+              </a>
+              <a href="mailto:hi@nnup.top" target="_blank" class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+              </a>
+              <a href="https://weibo.com/u/" target="_blank" class="contact-item">
+                <i class="fa-brands fa-weibo"></i>
+                <span>Weibo</span>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <span>在风雨中度过 <span id="runtime">0年0天0时0分0秒</span></span>
+      &nbsp;|&nbsp;
+      <span>&copy; 2024-<span id="footer-year"></span> nnup.top</span>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
