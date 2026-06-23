@@ -1,4 +1,4 @@
-// ===== Tab Navigation =====
+﻿// ===== Tab Navigation =====
 const navLinks = document.querySelectorAll('.nav-menu a');
 const sections = document.querySelectorAll('.right > section');
 
@@ -80,7 +80,7 @@ if (quoteEl) {
 function updateRuntime() {
   const el = document.getElementById('runtime');
   if (!el) return;
-  const start = new Date('2022-10-01T00:00:00+08:00');
+  const start = new Date('2022-10-25T09:27:39+08:00');
   const now = new Date();
   const diff = Math.floor((now - start) / 1000);
   const years = Math.floor(diff / (365 * 24 * 3600));
