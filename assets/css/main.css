@@ -1,4 +1,4 @@
-﻿/* ===== Reset & Base ===== */
+/* ===== Reset & Base ===== */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -555,6 +555,7 @@ main {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   body { overflow-y: auto; }
+  #container { height: auto; min-height: 100%; }
   main { align-items: flex-start; padding: 1em; }
 
   .card {
@@ -567,13 +568,16 @@ main {
     border-radius: 12px;
   }
 
+  .card { overflow: visible; }
+
   .left {
     width: 100%;
     min-width: unset;
-    padding: 2.5em 1.5em 1em;
+    padding: 2em 1.5em 1em;
     border-radius: 12px 12px 0 0;
+    overflow: visible;
   }
-  .avatar { margin-top: -4em; }
+  .avatar { margin-top: 0; }
   .avatar img, .avatar-placeholder { width: 80px; height: 80px; }
 
   .nav-menu {
@@ -587,7 +591,12 @@ main {
   .nav-menu li a { padding: 0.4em 0.8em; font-size: 0.8em; }
   .nav-menu li a::before { display: none; }
   .left-footer { display: none; }
-  .right { padding: 1.5em; }
+  .right {
+    flex: none;
+    padding: 1.5em;
+    overflow-y: visible;
+    display: block;
+  }
 
   #home h1 { font-size: 1.8em; }
   .quote-card { padding: 0.8em 1em; }
@@ -597,8 +606,11 @@ main {
 
   .site-footer {
     position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
     margin-top: 1em;
     margin-bottom: 1em;
-    color: rgba(148, 163, 184, 0.5);
+    color: rgba(148, 163, 184, 0.8);
   }
 }
