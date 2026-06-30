@@ -1,4 +1,4 @@
-﻿// ===== Tab Navigation =====
+// ===== Tab Navigation =====
 const navLinks = document.querySelectorAll('.nav-menu a');
 const sections = document.querySelectorAll('.right > section');
 
@@ -55,7 +55,7 @@ if (document.getElementById(initHash)) {
 })();
 
 // ===== Loading Overlay =====
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.getElementById('loading-overlay');
   setTimeout(() => {
     overlay.classList.add('hidden');
@@ -66,14 +66,17 @@ window.addEventListener('load', () => {
 // ===== Hitokoto (Quote API) =====
 const quoteEl = document.getElementById('hitokoto');
 if (quoteEl) {
-  fetch('https://v1.hitokoto.cn?c=i')
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 3000);
+  fetch('https://v1.hitokoto.cn?c=i', { signal: controller.signal })
     .then(res => res.json())
     .then(data => {
       quoteEl.textContent = '\u300e ' + data.hitokoto + ' \u300f';
     })
     .catch(() => {
       quoteEl.textContent = '\u300e \u4eba\u751f\u5373\u662f\u5230\u6765\u3001\u76f8\u9047\u3001\u966a\u4f34\u3001\u79bb\u5f00 \u300f';
-    });
+    })
+    .finally(() => clearTimeout(timeout));
 }
 
 // ===== Running Time Counter =====
